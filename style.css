@@ -1,135 +1,171 @@
-:root{
-    --main-color: #2e9322;
-    --main-color2:#0d068b;
-    --black: #13131a;
-    --nomes: #222;
-    --cor: #97d907;
-    --border: 0.1rem solid rgba(195, 195, 195, 0.583);
-    font-size: 10px;
+/* Define variáveis de cor e estilo globais */
+:root {
+    --main-color: #28a745; /* Verde principal */
+    --main-color2: #0d068b; /* Azul escuro (hover) */
+    --black: #13131a; /* Preto escuro */
+    --nomes: #222; /* Cinza escuro */
+    --cor: #97d907; /* Verde-limão */
+    --border: 0.1rem solid rgba(195, 195, 195, 0.583); /* Borda com transparência */
+    font-size: 10px; /* Tamanho base da fonte (1rem = 10px) */
 }
+
+/* Reset básico e estilos globais */
 * {
     margin: 0;
     padding: 0;
     outline: none;
     border: none;
     text-decoration: none;
-    text-transform: capitalize;
-    transition: 0.2s linear;
-    font-family: "Roboto", sans-serif;
-
+    text-transform: capitalize; /* Primeira letra maiúscula em todos os textos */
+    transition: 0.2s linear; /* Suaviza transições */
+    font-family: "Open Sans Bold", sans-serif; /* Fonte padrão */
 }
 
-section{
+/* Define espaçamento interno para seções */
+section {
     padding: 3rem 2rem;
     margin: 0 auto;
     max-width: 1200px;
 }
-  
+
+/* Cabeçalho fixo no topo da tela */
 .header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 99;
-    border-bottom: var(--border);
     background-color: #ffffff;
-    
 }
+
+/* Define tamanho do logo */
 .logo img {
-    width: 120px;
-    height: auto; /* Mantém a proporção */
-  }
-  .header section {
+    width: 100px;
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Organiza elementos dentro do cabeçalho */
+.header section {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-top: 0.1rem;
     padding-bottom: 0.1rem;
 }
-.navbar a{
+
+/* Estilo dos links do menu de navegação */
+.navbar a {
     margin: 0 1rem;
     font-size: 2rem;
 }
 
+/* Efeito hover no menu */
 .navbar a:hover {
     color: var(--main-color2);
     border-bottom: 0.1rem solid var(--main-color2);
     padding-bottom: 0.5rem;
-    font-size: 2rem;
 }
-.icons img{
+
+/* Ícones do canto direito (lupa/carrinho/etc.) */
+.icons img {
     margin: 1rem;
     cursor: pointer;
 }
-.icons img:hover{
+
+/* Aumenta ícone ao passar o mouse */
+.icons img:hover {
     width: 40px;
     height: 40px;
-
 }
-.btn{
-    background: #007BFF;
-    color: #fff;
+
+/* Estilo de botão padrão */
+.btn {
+    background: var(--main-color);
+    color:#fff;
     padding: 1rem 3rem;
     font-size: 1.7rem;
     cursor: pointer;
     margin-top: 1rem;
     display: inline-block;
 }
-.btn:hover{
+
+/* Animação sutil no botão ao passar o mouse */
+.btn:hover {
     letter-spacing: 0.1rem;
 }
+
+/* Barra superior (contato e email) */
 .top-bar {
-    background-color: var(--main-color); /* ou #4CAF50 se quiser o verde */
+    background-color: #0A1A2F; /* Verde principal */
     color: white;
-    font-size: 14px;
-    font-family: 'Roboto', sans-serif;
-    padding: 8px 0;
-  }
-  .top-bar .container {
+    font-size: 0px;
+    font-family: "Open Sans Bold", sans-serif;
+    padding: 4px 0;
+}
+
+
+/* Container da top-bar alinhado ao centro */
+.top-bar .container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 15px;
-  }
-  
-  .top-bar .left {
+}
+
+/* Alinha os itens da esquerda (telefone, email) */
+.top-bar .left {
     display: flex;
-    gap: 20px; /* espaço entre os dois textos à esquerda */
+    gap: 5px;
     align-items: center;
-  }
-  
-  .top-bar i {
-    margin-right: 5px;
-  }
-  
-/*PARA MUDAR A IMAGEM DE FUNDO*/
-.home-container{
-    background: url("./img/Orthopedic\ Prosthetics\ Market\ Upcoming\ Trends\ and\ Overview\ Forecast\ till\ 2031.jpg") ;
+}
+
+/* Links da top-bar */
+.top-bar .left a {
+    color: white;
+    font-size: 14px;
+}
+
+/* ------------------------------ */
+/* Estilo da seção inicial (home) */
+/* ------------------------------ */
+
+/* Define imagem de fundo da página inicial */
+.home-container {
+    background: url("./img/fotodefundo.jpg");
     background-position: center;
     background-size: cover;
 }
-.home-container section{
+
+/* Centraliza conteúdo na home */
+.home-container section {
     display: flex;
     align-items: center;
-    min-height: 100vh;
+    min-height: 100vh; /* Ocupa a altura total da tela */
 }
 
+/* Define largura máxima da área de conteúdo */
 .content {
     max-width: 60rem;
 }
-.content h3{
-    color: #222;
+
+/* Título grande da seção inicial */
+.content h3 {
+    color: #ffffff;
     font-size: 6rem;
 }
-.content p{
-    color:#222;
+
+/* Texto de apoio na home */
+.content p {
+    color: #ffffff;
     font-size: 2rem;
     font-weight: 100;
     line-height: 1.8;
     padding: 1rem;
 }
+
+/* Estilo de títulos das seções */
 .title {
     font-size: 5rem;
     color: #333;
@@ -137,80 +173,122 @@ section{
     text-transform: uppercase;
     margin-bottom: 4rem;
 }
+
+/* Destaque para span dentro do título */
 .title span {
     color: #333;
     text-transform: uppercase;
 }
-.about .row{
+
+/* Estilo da seção "Sobre nós" */
+.about .row {
     display: flex;
     align-items: center;
-    background-color: var(--nomes);
+    background-color: var(--nomes); /* cinza escuro */
 }
+
+/* Conteúdo da seção sobre */
 .about .row .content {
     padding: 2rem;
 }
-.about .row .content h3{
+
+/* Título da seção sobre */
+.about .row .content h3 {
     font-size: 3rem;
-    color:#fff;
+    color: #fff;
 }
-.about .row .content p{
+
+/* Parágrafo da seção sobre */
+.about .row .content p {
     font-size: 1.4rem;
-    color:#fff;
+    color: #fff;
     padding: 1rem 0;
     line-height: 1.8;
     text-transform: none;
 }
-.menu .box-container{
+
+/* Container dos produtos (menu) */
+.menu .box-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 1.5rem;
 }
-.menu .box-container .box{
-    text-align:center;
-    border: var(--black);
+
+/* Estilo de cada item de produto */
+.menu .box-container .box {
+    text-align: center;
+    border: 1px solid var(--nomes);
     padding: 5rem;
     cursor: pointer;
 }
-.menu .box-container .box img{
+
+/* Imagem de produto */
+.menu .box-container .box img {
     height: 10rem;
 }
-.menu .box-container .box h3{
+
+/* Nome do produto */
+.menu .box-container .box h3 {
     color: var(--nomes);
     font-size: 2rem;
     padding: 1rem 0;
 }
-.menu .box-container .box .price{
+
+/* Preço do produto */
+.menu .box-container .box .price {
     color: #fff;
     font-size: 2.5rem;
     padding: 0.5rem 0;
 }
-.menu .box-container .box .price span{
-    font-size:1.5rem;
+
+/* Preço antigo com traço */
+.menu .box-container .box .price span {
+    font-size: 1.5rem;
     text-decoration: line-through;
-    font-weight:lighter;
+    font-weight: lighter;
 }
-.menu .box-container .box:hover{
-    background-color: var() ;
+
+/* Hover do item do menu (FALTA VALOR EM var()) */
+.menu .box-container .box:hover {
+    background-color: var(); /* <<< ⚠️ Corrigir essa linha */
 }
+
+/* Estilo da seção de endereço */
 .address {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
+
+/*botão de link para segundo site 1 */
+
+.botao {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+/* Rodapé (footer) */
 .footer {
     text-align: center;
 }
-.footer .share{
+
+/* Ícones sociais do rodapé */
+.footer .share {
     padding: 1rem 0;
 }
+
+/* Imagens dos ícones do rodapé */
 .footer .share img {
     margin: 0.3rem;
     cursor: pointer;
     border-radius: 50%;
     padding: 1rem;
 }
+
+/* Hover nos ícones sociais */
 .footer .share img:hover {
-    background-color: #6ac707;
+    background-color: #6ac707; /* Cor ao passar o mouse */
 }
-
-
