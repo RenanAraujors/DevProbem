@@ -292,3 +292,9 @@ section {
 .footer .share img:hover {
     background-color: #6ac707; /* Cor ao passar o mouse */
 }
+@media screen and (max-width: 768px) {
+    .home-container{
+        width: 100%;
+        flex-direction: column;
+    }
+}
